@@ -4,6 +4,9 @@
 \chapter{Desenvolvimento}
 \label{cap:desenvolvimento}
 % ----------------------------------------------------------
+Neste capítulo, serão apresentados os elementos fundamentais envolvidos na criação da plataforma de artistas para a Casa de Cultura de João Monlevade. Serão discutidos aspectos gerais do sistema, com foco na sua arquitetura, nas tecnologias escolhidas para sua implementação, nas funcionalidades oferecidas aos usuários e nos principais artefatos gerados durante o processo de desenvolvimento.
+
+Para a modelagem e estruturação do sistema, foram utilizados os conceitos da UML, uma linguagem padrão na modelagem de software. Entre os diagramas elaborados estão o diagrama de classes, que mapeia a estrutura das entidades do sistema, e o diagrama de casos de uso, que descreve como os usuários interagem com as funcionalidades. Além disso, foi desenvolvido um diagrama entidade-relacionamento, destacando as relações entre as diferentes entidades do banco de dados, garantindo uma visão clara da organização e fluxo das informações dos artistas.
 
 \section{Formulação do problema}
 %-------------------
@@ -19,18 +22,17 @@ A criação de um site web específico para a Casa de Cultura é relevante tanto
 
 Além de servir como esse ponto central de informações, o site também funcionará como uma plataforma para dar visibilidade aos artistas monlevadenses, incentivando a valorização e a preservação da cultura local através da Vitrine de Artistas. Dessa forma, o projeto almeja não apenas digitalizar as operações da Casa de Cultura, mas também contribuir para a construção de uma identidade cultural sólida através de um meio digital, promovendo a inclusão e o engajamento da comunidade.
 
-Os principais objetivos desta proposta de modelo incluem: O desenvolvimento de uma plataforma acessível e intuitiva que atenda às necessidades da Casa de Cultura e da comunidade, permitindo fácil acesso às informações e recursos culturais;
+Os principais objetivos desta proposta de modelo incluem:
 
-Criação de uma Vitrine de Artistas, que destaque e promova os talentos locais, proporcionando um espaço para a divulgação e interação com o público.
-Implementação de funcionalidades para a gestão e divulgação de editais e eventos, facilitando a comunicação entre a instituição e os artistas;
-
-Elaboração de um espaço para a Escola de Artes, onde seja possível o colaborador da Casa de Cultura acessar informações específicas de alunos, professores e turmas. Acesso também para alunos ou responsáveis acompanharem notas e ocorrências;
-
-Fortalecimento da presença digital da Casa de Cultura através da integração com redes sociais e outras plataformas de comunicação, aumentando a visibilidade e o alcance das atividades promovidas pela instituição.
+\begin{itemize}
+	\item O desenvolvimento de uma plataforma acessível e intuitiva que atenda às necessidades da Casa de Cultura e da comunidade, permitindo fácil acesso às informações e recursos culturais;
+	\item Criação de uma Vitrine de Artistas, que destaque e promova os talentos locais, proporcionando um espaço para a divulgação e interação com o público.
+	Implementação de funcionalidades para a gestão e divulgação de editais e eventos, facilitando a comunicação entre a instituição e os artistas;
+	\item Elaboração de um espaço para a Escola de Artes, onde seja possível o colaborador da Casa de Cultura acessar informações específicas de alunos, professores e turmas. Acesso também para alunos ou responsáveis acompanharem notas e ocorrências;
+	\item Fortalecimento da presença digital da Casa de Cultura através da integração com redes sociais e outras plataformas de comunicação, aumentando a visibilidade e o alcance das atividades promovidas pela instituição.
+\end{itemize}
 
 \section{Modelo Conceitual}
-
-\subsection{Descrição do Modelo}
 
 O modelo conceitual proposto para o desenvolvimento do site web da Casa de Cultura de João Monlevade é estruturado para atender às necessidades específicas da instituição e da comunidade, proporcionando uma plataforma digital funcional, intuitiva e centrada na valorização da cultura local.
 
@@ -56,9 +58,9 @@ Para garantir que o site atenda aos objetivos definidos, o modelo conceitual inc
 
 Responsividade: O site será completamente responsivo, adaptando-se automaticamente a diferentes dispositivos e tamanhos de tela, garantindo uma experiência de usuário consistente em desktops, tablets, e smartphones.
 
-Sistema de Gerenciamento de Conteúdo (CMS): O backend do site será desenvolvido utilizando um sistema de gerenciamento de conteúdo, o CodeRed CMS baseado em Wagtail, para facilitar a atualização de informações e a adição de novos conteúdos sem a necessidade de conhecimentos técnicos avançados. Isso ajudará aos colaboradores a utilizar o sistema.
+Sistema de Gerenciamento de Conteúdo \ac{CMS}: O backend do site será desenvolvido utilizando um sistema de gerenciamento de conteúdo, o Wagtail CRX baseado em Wagtail, para facilitar a atualização de informações e a adição de novos conteúdos sem a necessidade de conhecimentos técnicos avançados. Isso ajudará aos colaboradores a utilizar o sistema.
 
-Sistema de Gestão da Casa de Cultura: Juntamente com o site, será desenvolvido utilizando a ferramenta django-admin a parte administrativa para utilização dos colaboradores da casa de cultura. A principio, essa seção posibilitará o acompanhamento dos editais, envolvendo sua criação, publicação e aprovação do público inscrito. Também será possível acessar informações sobre a Escola de Artes e a criação/edição de turmas, alunos, professores. A Vitrine de Artistas também será modificável através desse meio.
+Sistema de Gestão da Casa de Cultura: Juntamente com o site, será desenvolvido utilizando a ferramenta Django admin a parte administrativa para utilização dos colaboradores da casa de cultura. A principio, essa seção posibilitará o acompanhamento dos editais, envolvendo sua criação, publicação e aprovação do público inscrito. Também será possível acessar informações sobre a Escola de Artes e a criação/edição de turmas, alunos, professores. A Vitrine de Artistas também será modificável através desse meio.
 
 Segurança e Privacidade: O modelo prevê a implementação de boas práticas de segurança digital, garantindo a proteção dos dados dos usuários e a conformidade com a legislação vigente sobre proteção de dados.
 
@@ -87,16 +89,24 @@ Este modelo conceitual foi desenvolvido para garantir que o site da Casa de Cult
 %Histórico escolar.
 %------------------------------------
 
-O site web desenvolvido para a Casa de Cultura de João Monlevade foi projetado para oferecer uma ampla gama de funcionalidades que atendem tanto às necessidades da instituição quanto à comunidade local. Essas funcionalidades foram organizadas em três principais áreas: Vitrine para Artistas Locais, Controle de Editais e Diário de Classe e Controle de Alunos.
+O site web desenvolvido para a Casa de Cultura de João Monlevade foi projetado para oferecer uma diversa gama de funcionalidades que atendem tanto às necessidades da instituição quanto à comunidade local. Essas funcionalidades foram organizadas em três principais áreas: Vitrine para Artistas Locais, Controle de Editais e Controle da Escola de Artes.
 
 \subsection{Página principal}
 
-Adicionalmente, foi considerado o uso de um bloco de carrossel para destacar alguns artistas ou áreas específicas dentro da vitrine. Esse bloco, similar ao carrossel disponível no CodeRed CMS, foi adaptado para utilizar o SlickSlider, um plugin de carrossel jQuery, integrando-o diretamente com a estrutura do Wagtail, que gerencia o backend do site.
+Inicialmente, foi considerado o uso de um bloco de carrossel para destacar as notícias mais relevantes no momento. Após analisar que o carrossel padrão do Wagtail CRX não atenderia às expectativas da casa de cultura, ficou decidido usar um outro carrossel bem popular atualmente. Assim, foi adaptou-se o template padrão do Wagtail CRX para utilizar o SlickSlider, um plugin de carrossel jQuery, integrando-o diretamente com a estrutura do Wagtail que gerencia o backend do site.
 
-Integração com Wagtail e CodeRed CMS
-Para permitir a utilização do SlickSlider como um snippet, foi necessário registrar o modelo no Wagtail e permitir que ele fosse adicionado a qualquer página do site. O snippet SlickSlider foi registrado no admin do Wagtail, permitindo que ele pudesse ser escolhido e configurado diretamente na interface de gerenciamento de conteúdo, similar ao carrossel do CodeRed CMS.
+Para permitir a utilização do SlickSlider no projeto, foi necessário alterar o template do carrossel padrão. Dessa forma, o bloco continua registrado no admin do Wagtail, permitindo que ele possa ser escolhido e configurado diretamente na interface de gerenciamento de conteúdo, com as mesmas funcionalidades do carrossel padrão do Wagtail CRX.
 
-O código do modelo foi colocado no arquivo models.py e o template correspondente foi configurado para renderizar o slider nas páginas onde ele fosse adicionado. Isso permitiu uma maior flexibilidade na personalização das páginas da Vitrine de Artistas, garantindo que o layout pudesse ser ajustado conforme necessário.
+O código do template foi colocado no arquivo carousel\_block.html, dentro da pasta templates, ficando assim configurado para renderizar o slider nas páginas onde ele fosse adicionado. Isso permitiu uma maior flexibilidade na personalização das páginas da Casa de Cultura, garantindo que o layout possa ser ajustado conforme necessário.
+
+\begin{figure}[htb]
+	\caption{\label{fig_grafico}Página principal}
+	\begin{center}
+	    \includegraphics[scale=0.35]{./img/pagina_principal.png}
+	\end{center}
+	\legend{Fonte: o autor}
+\end{figure}
+
 
 \subsection{Vitrine para Artistas Locais}
 
@@ -104,17 +114,26 @@ Uma das funcionalidades centrais do site é a Vitrine para Artistas Locais, que 
 
 Cadastro de Artistas: Os artistas podem se registrar no site, fornecendo informações básicas como nome, nome artístico, área de atuação, e links para suas redes sociais ou portfólios online. Essa funcionalidade foi planejada para ser simples e acessível, permitindo que artistas com diferentes níveis de familiaridade com tecnologia possam se inscrever.
 
-Criação de Perfis: Após o cadastro, cada artista tem um perfil dedicado no site, onde pode compartilhar mais detalhes sobre sua trajetória, estilo de trabalho, e influências. Esses perfis servem como cartões de visita digitais, oferecendo uma plataforma centralizada para que os artistas se conectem com o público.
+Exibição dos Perfis: Após o cadastro, cada artista tem um perfil dedicado no site, onde pode fica exibido informações relevantes sobre o mesmo como seu nome artístico, área de atuação, e categoria. Esses perfis servem como cartões de visita digitais, oferecendo uma plataforma centralizada para que os artistas se conectem com o público. A exibição dos perfis dos artistas fica pendente da aprovação da Casa de Cultura.
 
-A criação da Vitrine de Artistas no website da Casa de Cultura de João Monlevade foi um processo que envolveu várias etapas de planejamento, implementação e integração com as ferramentas disponíveis no CodeRed CMS, que foi utilizado como base para o desenvolvimento do site.
+Gerenciamento dos Artistas: Também após o cadastro, o artista fica salvo no banco de dados do sistema de gestão. Apartir disso, a Casa de Cultura poderá aprovar ou nao sua exibição no website.
+
+A criação da Vitrine de Artistas no website da Casa de Cultura de João Monlevade foi um processo que envolveu várias etapas de planejamento, implementação e integração com as ferramentas disponíveis no Wagtail CRX, que foi utilizado como base para o desenvolvimento do site.
 
 
+\subsubsection{Interface do Django admin}
 
-\subsubsection{Interface do Django Admin}
+Para facilitar a gestão dos artistas cadastrados, foi criado um seção no Django admin personalizado para a Vitrine de Artistas. Isso permitiu que administradores do site pudessem facilmente adicionar, editar e remover artistas, além de gerenciar suas informações de forma centralizada.
 
-Para facilitar a gestão dos artistas cadastrados, foi criado um Django Admin personalizado para a Vitrine de Artistas. Isso permitiu que administradores do site pudessem facilmente adicionar, editar e remover artistas, além de gerenciar suas informações de forma centralizada.
+O Django admin foi configurado para exibir as informações dos artistas em um layout claro e organizado, com filtros por categorias e áreas de atuação. Também foram adicionadas funcionalidades para facilitar a busca e a edição em massa de registros.
 
-O Django Admin foi configurado para exibir as informações dos artistas em um layout claro e organizado, com filtros por categorias e áreas de atuação. Também foram adicionadas funcionalidades para facilitar a busca e a edição em massa de registros.
+\begin{figure}[htb]
+	\caption{\label{fig_grafico}Página de administração da Vitrine de Artistas}
+	\begin{center}
+	    \includegraphics[scale=0.45]{./img/admin_artista.png}
+	\end{center}
+	\legend{Fonte: o autor}
+\end{figure}
 
 \subsubsection{Exibição dos Artistas no Website}
 
@@ -122,7 +141,24 @@ Para a exibição dos artistas no website, foi necessário desenvolver um layout
 
 A implementação envolveu o uso de grids de cards do Bootstrap, ajustados para exibir corretamente a categoria e a área de atuação no formato "categoria - área de atuação". O foco foi manter o layout limpo e moderno, garantindo que o conteúdo fosse acessível e atrativo para os usuários.
 
-Para melhorar a interatividade da Vitrine de Artistas, foi implementado um sistema onde o card inteiro seria clicável, redirecionando o usuário para uma página com mais detalhes sobre o artista selecionado. Isso foi feito utilizando HTML padrão e funcionalidades nativas do Bootstrap, sem a necessidade de CSS personalizado.
+\begin{figure}[htb]
+	\caption{\label{fig_grafico}Página da Vitrine de Artistas}
+	\begin{center}
+	    \includegraphics[scale=0.35]{./img/vitrine_de_artistas.png}
+	\end{center}
+	\legend{Fonte: o autor}
+\end{figure}
+
+Para melhorar a interatividade da Vitrine de Artistas, foi implementado um sistema onde o card inteiro seria clicável, redirecionando o usuário para uma página com mais detalhes sobre o artista selecionado. Isso foi feito utilizando \ac{HTML} padrão e funcionalidades nativas do Bootstrap, sem a necessidade de \ac{CSS} personalizado.
+
+
+\begin{figure}[htb]
+	\caption{\label{fig_grafico}Efeito flutuante}
+	\begin{center}
+	    \includegraphics[scale=0.5]{./img/vitrine_de_artistas_hover.png}
+	\end{center}
+	\legend{Fonte: o autor}
+\end{figure}
 
 Com a implementação da Vitrine de Artistas, o website da Casa de Cultura de João Monlevade passa a contar com uma plataforma robusta para a divulgação dos artistas locais. A utilização de tecnologias como Django, Wagtail e Bootstrap permitiu a criação de um sistema que combina funcionalidade e estética, proporcionando uma experiência de usuário agradável e intuitiva.
 
@@ -130,11 +166,11 @@ Essa solução não apenas facilita a gestão e a exibição dos artistas, mas t
 
 \subsection{Escola de Artes}
 
-O desenvolvimento do sistema de gestão para a Escola de Artes no website da Casa de Cultura de João Monlevade foi uma tarefa que envolveu a criação de modelos personalizados, integrações com o Django Admin, e a implementação de funcionalidades que visavam facilitar o gerenciamento de alunos, turmas e professores, além de permitir o acesso controlado a dados específicos.
+O desenvolvimento do sistema de gestão para a Escola de Artes no website da Casa de Cultura de João Monlevade foi uma tarefa que envolveu a criação de modelos personalizados, integrações com o Django admin, e a implementação de funcionalidades que visavam facilitar o gerenciamento de alunos, turmas e professores, além de permitir o acesso controlado a dados específicos.
 
-\subsubsection{Interface do Django Admin}
+\subsubsection{Interface do Django admin}
 
-A gestão desses modelos foi centralizada no Django Admin, com uma interface personalizada para facilitar a administração de todos os dados relacionados à Escola de Artes. A configuração do Django Admin foi feita de maneira a permitir uma visualização clara e organizada dos registros de alunos, professores e turmas.
+A gestão desses modelos foi centralizada no Django admin, com uma interface personalizada para facilitar a administração de todos os dados relacionados à Escola de Artes. A configuração do Django admin foi feita de maneira a permitir uma visualização clara e organizada dos registros de alunos, professores e turmas.
 
 Além disso, foi implementado um sistema que permitia a criação de usuários no momento do cadastro dos alunos. Esses usuários poderiam ser responsáveis (no caso de dependentes) ou os próprios alunos. A funcionalidade de geração de links para configuração de login e senha foi integrada, garantindo que cada usuário pudesse definir suas credenciais de acesso de maneira segura e eficiente.
 
@@ -142,9 +178,29 @@ Um dos desafios enfrentados foi o controle de acesso às informações de alunos
 
 Essa funcionalidade foi implementada utilizando as ferramentas nativas do Django para controle de permissões, onde cada usuário tinha seu acesso limitado aos dados específicos com base em seu papel (aluno ou responsável). Esse controle foi estendido para o Diário de Classe, garantindo que os registros fossem mantidos privados e acessíveis apenas aos professores responsáveis e aos administradores do sistema.
 
+\begin{figure}[htb]
+	\caption{\label{fig_grafico}Acesso do professor}
+	\begin{center}
+	    \includegraphics[scale=0.5]{./img/admin_professor.png}
+	\end{center}
+	\legend{Fonte: o autor}
+\end{figure}
+
+\subsubsection{Exibição de vagas no site}
+
 O desenvolvimento do sistema de gestão da Escola de Artes traz diversas melhorias operacionais e administrativas para a Casa de Cultura de João Monlevade. A centralização dos dados e o controle de acesso eficiente permite que a administração da escola seja realizada de forma mais organizada e segura, garantindo a privacidade e a integridade dos dados dos alunos.
 
-A integração com o Django Admin e o sistema de inscrições online também facilita o processo de matrícula e acompanhamento dos alunos, oferecendo uma plataforma moderna e intuitiva tanto para os administradores quanto para os usuários finais.
+Outro processo que agora foi melhorado é o de inscrição em turmas. Acessando uma página dedicada no site, o usuário pode visualizar as turmas que estão com inscrições abertas e se inscrever através do próprio site, através de um formulário simplificado. Isso foi possível apartir da construção de um template de página específico para essa funcionalidade, que também foi reutilizado em outra parte do sistema, a de editais.
+
+\begin{figure}[htb]
+	\caption{\label{fig_grafico}Lista de vagas disponíveis}
+	\begin{center}
+	    \includegraphics[scale=0.5]{./img/lista_turmas.png}
+	\end{center}
+	\legend{Fonte: o autor}
+\end{figure}
+
+A integração com o Django admin e o sistema de inscrições online também facilita o processo de matrícula e acompanhamento dos alunos, oferecendo uma plataforma moderna e intuitiva tanto para os administradores quanto para os usuários finais.
 
 \subsection{Controle de Editais}
 
@@ -154,22 +210,72 @@ Publicação de Editais: A Casa de Cultura pode publicar editais diretamente no 
 
 Inscrições para Editais: Os usuários do site podem se inscrever nos editais diretamente pela plataforma. A funcionalidade inclui a possibilidade de preenchimento de formulários online e upload de documentos exigidos, facilitando o processo de inscrição e garantindo que todas as submissões sejam centralizadas.
 
+Gerenciamento dos Editais: Também após a inscrição, o candidato fica salvo no banco de dados do sistema de gestão. Apartir disso, a Casa de Cultura poderá aprovar ou nao sua candidatura à aquele edital.
+
+\subsubsection{Interface do Django admin}
+
+A gestão desses modelos também foi adicionada no Django admin, com uma interface personalizada para facilitar a administração dos dados relacionados aos editais. A configuração do Django admin foi feita de maneira a permitir uma visualização clara e organizada das candidaturas e editais publicados.
+
+Através da página administrativa, o funcionário da casa de cultura poderá visualizar, criar, editar e deletar novos ou presentes editais, além de aprovar ou não candidaturas a estes. Também é possível visualizar todos os documentos referentes aos editais, tanto da sua publicação quanto dos candidatos. Também foram criados filtros que melhoram a usabilidade da ferramenta.
+
+\begin{figure}[htb]
+	\caption{\label{fig_grafico}Página administrativa dos editais}
+	\begin{center}
+	    \includegraphics[scale=0.45]{./img/admin_edital.png}
+	\end{center}
+	\legend{Fonte: o autor}
+\end{figure}
+
+
+Um dos desafios enfrentados foi justamente o gerenciamento de múltiplos documentos que poderiam ser anexados em um formulário de candidatura. O sistema foi configurado para garantir que cada candidatura tivesse um relacionamento muitos-para-muitos com a classe Documentos, resolvendo assim essa questão.
+
+
+
+\subsubsection{Exibição de editais no site}
+
+Similarmente a Escola de Artes, a seção de editais no site da Casa de Cultura surge como uma grande ferramenta para os processos administrativos, também mostrando-se de extrema importância para a população, que poderá ter o acesso aos status dos editais publicados pela fundação.
+
+Em uma página própria, o usuário poderá ver todos os editais já publicados e aqueles que estão abertos, os quais poderá se canditadar através do próprio site. Isso torna-se muito importante para a usabilidade e confiabilidade, eliminando redirecionamentos desnecessários que podem assustar um possível candidato.
+
+\begin{figure}[htb]
+	\caption{\label{fig_grafico}Lista de editais}
+	\begin{center}
+	    \includegraphics[scale=0.35]{./img/lista_editais.png}
+	\end{center}
+	\legend{Fonte: o autor}
+\end{figure}
+
+A integração com o Django admin e o sistema de inscrições online também facilita o processo de matrícula e acompanhamento dos alunos, oferecendo uma plataforma moderna e intuitiva tanto para os administradores quanto para os usuários finais. A inscrição através de um formulário simplificado no site torna a experiência simples e agradável.
+
+\begin{figure}[htb]
+	\caption{\label{fig_grafico}Formulário de um edital}
+	\begin{center}
+	    \includegraphics[scale=0.3]{./img/form_edital.png}
+	\end{center}
+	\legend{Fonte: o autor}
+\end{figure}
+
 \section{Arquitetura do Site Web}
 
 A arquitetura de um site web, especialmente no que se refere ao layout e design, desempenha um papel crucial na criação de uma experiência de usuário eficiente e visualmente impactante. Um layout bem estruturado organiza os elementos da página de forma lógica e acessível, facilitando a navegação e a busca por informações essenciais. Além disso, o design responsivo é fundamental para garantir que o site seja visualmente atraente e funcional em diversos dispositivos, promovendo uma interface adaptável que atenda às necessidades dos usuários em diferentes contextos de uso \cite{garrett2010elements}. A escolha criteriosa da paleta de cores, tipografia e hierarquia visual não só reforça a identidade da marca, mas também guia o usuário de maneira intuitiva através do conteúdo, estabelecendo uma conexão emocional que melhora a usabilidade e fortalece a credibilidade do site.
 
 \subsection{Layout e Design}
 
-No desenvolvimento do site da Casa de Cultura de João Monlevade, utilizando o CodeRed CMS, o layout e o design foram estrategicamente pensados para proporcionar uma experiência de usuário que fosse simultaneamente fluida e esteticamente agradável, mantendo um equilíbrio entre simplicidade e sofisticação. Através da utilização de templates personalizados, suportados pelo Bootstrap, foi possível assegurar uma estrutura responsiva e coerente em todas as páginas, adaptando-se eficientemente a diferentes dispositivos, conforme preconizado por \cite{liddle2013design}. O design foi cuidadosamente planejado para refletir a rica identidade cultural da instituição, utilizando uma paleta de cores e uma tipografia que evocam tanto a tradição quanto a modernidade, alinhando-se perfeitamente ao propósito da Casa de Cultura. A organização do conteúdo segue uma hierarquia clara e intuitiva, facilitando a navegação e destacando informações cruciais como notícias culturais, acesso a subsistemas como editais, a vitrine de artistas e a Escola de Artes. Essa integração harmoniosa entre layout e design não só enriquece a usabilidade, mas também fortalece a conexão emocional dos visitantes com o site, criando um ambiente digital que é tanto acolhedor quanto representativo da riqueza cultural de João Monlevade.
+No desenvolvimento do site da Casa de Cultura de João Monlevade, utilizando o Wagtail CRX, o layout e o design foram estrategicamente pensados para proporcionar uma experiência de usuário que fosse simultaneamente fluida e esteticamente agradável, mantendo um equilíbrio entre simplicidade e sofisticação. Através da utilização de templates personalizados, suportados pelo Bootstrap, foi possível assegurar uma estrutura responsiva e coerente em todas as páginas, adaptando-se eficientemente a diferentes dispositivos, conforme preconizado por \cite{liddle2013design}. O design foi cuidadosamente planejado para refletir a rica identidade cultural da instituição, utilizando uma paleta de cores e uma tipografia que evocam tanto a tradição quanto a modernidade, alinhando-se perfeitamente ao propósito da Casa de Cultura. A organização do conteúdo segue uma hierarquia clara e intuitiva, facilitando a navegação e destacando informações cruciais como notícias culturais, acesso a subsistemas como editais, a vitrine de artistas e a Escola de Artes. Essa integração harmoniosa entre layout e design não só enriquece a usabilidade, mas também fortalece a conexão emocional dos visitantes com o site, criando um ambiente digital que é tanto acolhedor quanto representativo da riqueza cultural de João Monlevade.
 
 \subsection{Navegação}
 
-A navegação do site da Casa de Cultura de João Monlevade foi projetada para ser intuitiva e eficiente, assegurando que os usuários encontrem rapidamente as informações desejadas. A estrutura do site é organizada por meio de uma navbar que dispõe os principais menus de forma clara, facilitando o acesso a seções como eventos, exposições e notícias. As notícias, categorizadas de maneira lógica, permitem uma busca simplificada e mantêm o usuário engajado com o conteúdo \cite{nielsen2012usability}. Além disso, a integração de outros sistemas, como o da Escola de Artes, diretamente no site principal, onde também são publicados os editais, oferece uma experiência de usuário coesa e centralizada. Para garantir uma gestão séria e segura das informações, o acesso dos pais às ocorrências dos alunos é realizado exclusivamente através do Django Admin, proporcionando um ambiente profissional e controlado. Essa abordagem de navegação não só aprimora a acessibilidade, mas também reforça a confiança dos usuários no sistema, refletindo o compromisso da instituição com a seriedade e transparência na gestão das informações.
+A navegação do site da Casa de Cultura de João Monlevade foi projetada para ser intuitiva e eficiente, assegurando que os usuários encontrem rapidamente as informações desejadas. A estrutura do site é organizada por meio de uma navbar que dispõe os principais menus de forma clara, facilitando o acesso a seções como "A fundação", "Contato" e "Vitrine de Artistas". As notícias, categorizadas de maneira lógica, permitem uma busca simplificada e mantêm o usuário engajado com o conteúdo \cite{nielsen2012usability}. 
+
+Além disso, a integração de outros sistemas, como o da Escola de Artes, diretamente no site principal, onde também são publicados os editais, oferece uma experiência de usuário coesa e centralizada. Para garantir uma gestão séria e segura das informações, o acesso dos pais às ocorrências dos alunos é realizado exclusivamente através do Django admin, proporcionando um ambiente profissional e controlado. Essa abordagem de navegação não só aprimora a acessibilidade, mas também reforça a confiança dos usuários no sistema, refletindo o compromisso da instituição com a seriedade e transparência na gestão das informações.
 
 \subsection{Tecnologias Utilizadas}
 
-O desenvolvimento do site da Casa de Cultura de João Monlevade envolveu a aplicação de tecnologias robustas, com destaque para o CodeRed CMS, uma plataforma baseada em Django que facilita a criação e gestão de conteúdo. Este CMS oferece funcionalidades padrão, como gestão de páginas, formulários, menus dinâmicos e integração com diversos módulos, permitindo uma customização extensiva dos templates para atender às necessidades específicas do site \cite{ellis2015coders}. Bootstrap, amplamente utilizado no projeto, é essencial para garantir que a navegação seja responsiva e consistente em todos os dispositivos, graças aos seus componentes pré-construídos, como navbar, dropdowns e sistemas de grid, que tornam o desenvolvimento mais ágil e uniforme. A capacidade de personalização oferecida pelos templates do Django permite que cada detalhe do layout e da navegação seja ajustado para refletir com precisão a identidade visual da Casa de Cultura, resultando em uma experiência de usuário intuitiva e envolvente. A combinação dessas tecnologias proporciona um site funcional, esteticamente atraente e fácil de navegar, contribuindo para uma presença digital impactante e eficaz.
+O desenvolvimento do site da Casa de Cultura de João Monlevade envolveu a aplicação de tecnologias robustas, com destaque para o Wagtail CRX, uma plataforma baseada em Django que facilita a criação e gestão de conteúdo. Este \ac{CMS} oferece funcionalidades padrão, como gestão de páginas, formulários, menus dinâmicos e integração com diversos módulos, permitindo uma customização extensiva dos templates para atender às necessidades específicas do site \cite{ellis2015coders}. Bootstrap, amplamente utilizado no projeto, é essencial para garantir que a navegação seja responsiva e consistente em todos os dispositivos, graças aos seus componentes pré-construídos, como navbar, dropdowns e sistemas de grid, que tornam o desenvolvimento mais ágil e uniforme. 
 
+A capacidade de personalização oferecida pelos templates do Django permite que cada detalhe do layout e da navegação seja ajustado para refletir com precisão a identidade visual da Casa de Cultura, resultando em uma experiência de usuário intuitiva e envolvente. A combinação dessas tecnologias proporciona um site funcional, esteticamente atraente e fácil de navegar, contribuindo para uma presença digital impactante e eficaz.
+
+Para a customização do carrossel padrão do Wagtail CRX, foi implementado o SlickSlider, modificando o template do mesmo. A Vitrine de Artistas também utiliza um template, por sua vez, desenvolvido pelo autor para este uso específico usando Bootstrap e \ac{CSS}. Outras seções que utilzaram templates foram a listagem de editais e de turmas disponíveis.
 
 \section{Banco de Dados}
 
@@ -182,13 +288,11 @@ A estrutura de um banco de dados, fundamental para qualquer aplicação web, def
 Inicialmente, foi necessário definir a estrutura de dados para a Vitrine de Artistas, considerando as necessidades de armazenamento e apresentação de informações sobre os artistas locais. Foram criados modelos no Django para representar esses dados de maneira organizada e eficiente. Cada artista poderia ter informações como Nome, Nome Artístico, Área de Atuação, Links para portfólios ou redes sociais, documentos, imagens e uma categorização por área de atuação.
 
 \begin{figure}[htb]
-	\centering
-	 \begin{minipage}{0.4\textwidth}
-	   \centering
-	   \caption{Diagrama ER da Vitrine de Artistas} \label{er_diagram_vitrine}
-	   \includegraphics[scale=0.5]{./img/er_diagram_vitrine.png}
-	   \legend{Fonte: Produzido pelo autor}
-	 \end{minipage}
+	\caption{\label{fig_grafico}Diagrama ER da Vitrine de Artistas}
+	\begin{center}
+	    \includegraphics[scale=0.3]{./img/er_diagram_vitrine.png}
+	\end{center}
+	\legend{Fonte: o autor}
 \end{figure}
 
 \subsubsection{Escola de Artes}

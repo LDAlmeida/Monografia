@@ -9,6 +9,14 @@ No mundo contemporâneo, marcado pela conectividade e pelos avanços tecnológic
 
 No entanto, a criação de uma plataforma cultural esbarra em um desafio recorrente enfrentado por muitas iniciativas culturais no Brasil: a escassez de recursos financeiros. Em um cenário de cortes orçamentários e falta de investimentos, torna-se ainda mais desafiador obter os recursos necessários para viabilizar projetos como esse. É nesse contexto que se busca por alternativas criativas e parcerias gratuitas para tornar possível a concretização da plataforma de artistas monlevadenses.
 
+Além de servir como um meio de divulgação, a plataforma se propõe a ser uma ponte entre os artistas locais e o público, facilitando o acesso à arte produzida na região e permitindo que os artistas ganhem maior visibilidade. Em uma cidade como João Monlevade, cuja cena cultural é rica, mas pouco explorada fora de seus limites, uma ferramenta como essa tem o potencial de fortalecer o setor artístico e criar novas oportunidades de valorização e reconhecimento. Ao reunir informações sobre os artistas, seus portfólios e produções, a plataforma oferece um espaço centralizado para que o público possa conhecer e se conectar com o que é produzido na cidade.
+
+No entanto, a implementação de uma plataforma dessa magnitude enfrenta desafios que vão além da simples escassez de recursos. Há também a necessidade de garantir que ela seja funcional, acessível e atrativa tanto para os artistas quanto para o público. A usabilidade e a intuitividade do sistema são aspectos cruciais para que o projeto seja bem-sucedido, considerando que muitos dos artistas locais podem não ter familiaridade com tecnologias digitais complexas. Portanto, o desenvolvimento de uma interface amigável, que promova a participação ativa dos usuários, é essencial para o engajamento.
+
+Paralelamente aos desafios, a criação dessa plataforma também traz consigo diversas oportunidades. A iniciativa pode fortalecer a identidade cultural da cidade, promovendo uma rede de colaboração entre artistas, instituições culturais e o público. Além disso, a plataforma tem o potencial de fomentar o turismo cultural na cidade, atraindo visitantes interessados em conhecer o trabalho dos artistas monlevadenses e participar dos eventos promovidos pela Casa de Cultura.
+
+Dessa forma, o desenvolvimento da plataforma se apresenta não apenas como uma solução tecnológica, mas também como uma estratégia para a valorização da cultura local, possibilitando que os artistas tenham maior autonomia na divulgação de suas obras e que o público tenha acesso facilitado à produção cultural de João Monlevade.
+
 % ----------------------------
 \section{O problema de pesquisa}
 \label{sec:problema}
@@ -19,24 +27,33 @@ Compreender os desafios relacionados à captação de recursos e buscar alternat
 
 Outro problema a ser vencido é a falta de conhecimento tecnológico por parte dos artistas, criando-se assim a necessidade de garantir a acessibilidade e a usabilidade do site para todos os públicos, sejam esses artistas ou cidadãos comuns. A construção do site deve levar em consideração essa questão e implementar soluções para que as informações sejam passadas de forma integra e de fácil entendimento para todos. A simplicidade e interação de fácil dedução é chave para alcançar esse objetivo.
 
+Um fator que não pode ser subestimado é o engajamento da própria comunidade artística e do público local. Mesmo com uma plataforma bem estruturada e acessível, a adesão ao projeto depende da vontade dos artistas de participar e da disposição do público de interagir com o conteúdo disponível. Isso inclui não apenas a divulgação da plataforma, mas também a criação de estratégias para incentivar a participação ativa dos artistas, garantindo que eles vejam valor em fazer parte da iniciativa. Sem um forte engajamento da comunidade, o impacto da plataforma pode ser limitado.
+
 Além disso, um grande problema que é recorrente quando se trata de sistemas em geral é a manutenibilidade do código. O site e o sistema de gestão deve ser desenvolvido não apenas pensando na interação site-usuário, mas também ser bem estruturado na parte do backend para que não seja abandonado pela sua complexidade. A escalabilidade de um sistema é de grande importancia para sua longevidade, tornando as boas práticas de programação um ponto chave para o sucesso do projeto como um todo.
 
 A facilidade atualização do conteúdo também é outro fator importante a ser considerado. A implementação de um sistema CMS resolve o problema fornecendo uma interface amigável para a publicação de artigos, edição de páginas e controle de conteúdos do todo o site, além de restrigir o acesso a parte administrativa de forma efetiva com a criação de usuários e definição de papéis. A escolha do CoderedCMS, um \textit{fork} do Wagtail, sistema de gestão de conteúdo baseado em Python, atende perfeitamente as demandas da Casa de Cultura e permite que o sistema de gestão para a Escola de Artes, controle de Editais e Vitrine de Artistas esteja no mesmo \textit{codebase}.
+
+Considerando a necessidade de manter o conteúdo da plataforma atualizado e relevante, surge o desafio de implementar processos contínuos de curadoria e gerenciamento de conteúdo. A manutenção da qualidade e pertinência das informações requer um esforço constante de coleta e atualização de dados sobre os artistas, seus trabalhos e eventos culturais. Isso demanda tempo, equipe qualificada e um sistema eficiente para facilitar a atualização, o que pode ser dificultado pela falta de recursos humanos e tecnológicos. Além disso, sem um planejamento de longo prazo, a plataforma corre o risco de se tornar obsoleta ou desatualizada, perdendo seu valor como ferramenta de promoção cultural.
 
 Assim, o problema de pesquisa deste trabalho consiste em como superar a dificuldade em obter recursos financeiros para o desenvolvimento da plataforma de artistas monlevadenses, criando essa parceria com a Casa de Cultura que permite a viabilização e sustentabilidade do projeto, garantindo o acesso à cultura e valorizando os talentos artísticos presentes em Monlevade.
 
 \section{Objetivos}
 \label{sec:objetivos}
 
-O objetivo geral desse trabalho é justamente contribuir para a solução desse problema, desenvolvendo de uma plataforma digital que funcione como uma vitrine para os talentos artísticos de Monlevade. Através dessa plataforma, será possível não apenas expor e divulgar as obras de arte, mas também proporcionar ao público uma forma acessível e interativa de conhecer e apreciar a produção cultural local, através da publicação de artigos no estilo blog. Além disso, também será desenvolvimento um sistema de gestão para a Escola de Artes, informatizando o fluxo de trabalho. Esse sistema de gestão também auxiliará na publicação de Editais para a casa de cultura, além de gerenciar os outros módulos.
+O objetivo geral deste trabalho é desenvolver uma plataforma digital que funcione como uma vitrine para os talentos artísticos de Monlevade, contribuindo para a promoção e valorização da cultura local. Através dessa plataforma, os artistas terão um espaço dedicado para expor e divulgar suas obras, e o público poderá acessar de maneira interativa e acessível o vasto acervo cultural da cidade. Além disso, será implementado um sistema de gestão informatizado para a Escola de Artes, que facilitará o controle de atividades internas e a publicação de editais, promovendo uma maior organização e eficiência no funcionamento da Casa de Cultura.
 
 Os objetivos específicos são:
 
 \begin{itemize}
-	\item Confecção de um site para a publicação de artigos, implementando um sistema CMS.
-	\item Desenvolvimento do sistema de gestão para a Escola de Artes.
-	\item Desenvolver uma Vitrine de Artistas, acessível através do site da Casa de Cultura.
-	\item Criação de um módulo de editais para o sistema de gestão, também possibilitando acesso as informações no site da Casa de Cultura.
+	\item Desenvolvimento de um site com sistema \ac{CMS} para publicação de artigos: Implementar um \ac{CMS} que permitirá a fácil publicação e atualização de artigos e notícias relacionadas à cultura local. O objetivo é criar um ambiente digital dinâmico e constantemente atualizado, que promova o engajamento do público.
+
+	\item Desenvolvimento de um sistema de gestão para a Escola de Artes: Criar um sistema integrado que auxilie na administração das atividades da Escola de Artes, como o gerenciamento de alunos, turmas, cursos e eventos. Esse sistema deve ser acessível e fácil de usar para os gestores, com o objetivo de otimizar o fluxo de trabalho e melhorar a eficiência operacional da escola.
+
+	\item Criação da Vitrine de Artistas: Desenvolver uma funcionalidade dentro do site da Casa de Cultura que permita aos artistas locais cadastrar suas obras, biografias e informações relevantes, criando um catálogo interativo acessível ao público. O objetivo é garantir uma plataforma inclusiva, onde todos os artistas possam expor seus trabalhos de forma organizada e fácil de navegar, promovendo maior visibilidade para a produção artística de Monlevade.
+
+	\item Implementação do módulo de Editais: Desenvolver um módulo que facilite a criação, gerenciamento e publicação de editais culturais. Esse sistema permitirá a Casa de Cultura gerir os processos seletivos de maneira mais ágil e transparente, com acesso público às informações por meio do site. O objetivo é assegurar que a divulgação de oportunidades culturais seja feita de forma clara e acessível.
+
+	\item Avaliação das funcionalidades implementadas: As funcionalidades desenvolvidas serão avaliadas com base em critérios como usabilidade, acessibilidade e eficiência. Serão realizados testes de interação com os usuários e gestores para garantir que o sistema atenda às necessidades práticas da Casa de Cultura e dos artistas. Espera-se alcançar uma plataforma funcional e eficaz, que otimize o gerenciamento cultural e fortaleça o vínculo entre a Casa de Cultura e a comunidade artística.
 \end{itemize}
 
 
@@ -50,12 +67,12 @@ O objeto de pesquisa deste trabalho é o desenvolvimento de uma plataforma digit
 Os passos para execução deste trabalho são assim definidos:
 
 \begin{itemize}
-	\item Fazer uma revisão da literatura sobre os tópicos: Linguagem de Modelagem Unificada (\ac{UML}), tecnologias empregadas no desenvolvimento do trabalho e pesquisas correlatas ao tema deste estudo;
+	\item Fazer uma revisão da literatura sobre os tópicos: \ac{UML}, tecnologias empregadas no desenvolvimento do trabalho e pesquisas correlatas ao tema deste estudo;
 	\item Desenvolvimento do sistema de gestão para a Casa de Cultura, com os módulos de vitrine de artistas, editais e escola de artes;
-	\item Desenvolvimento do sistema CMS para publicação de artigos, integrado com o sistema de gestão;
+	\item Desenvolvimento do sistema \ac{CMS} para publicação de artigos, integrado com o sistema de gestão;
 	\item Executar testes no sistema para assegurar que ele funcione corretamente e coletar feedbacks que confirmem sua eficácia.
 \end{itemize}
 
 \section{Organização do trabalho}
 
-Neste capítulo, foi definido o contexto do tema tratado neste trabalho, delineando o problema de pesquisa e os objetivos estabelecidos. No Capítulo 2, é feita uma revisão bibliográfica relevante ao tema. O Capítulo 3 consiste no desenvolvimento do trabalho, detalhando a coleta dos requisitos do sistema e alguns diagramas Unified Modeling Language (\ac{UML}). Além disso, este capítulo descreve as interfaces do sistema e o funcionamento de cada tela. No Capítulo 4, é abordada a metodologia utilizada para avaliar o sistema, bem como para mensurar a qualidade do sistema. Os resultados dessa avaliação também são discutidos nesta seção. Por fim, o Capítulo 5 apresenta as conclusões do projeto.
+Neste capítulo, foi definido o contexto do tema tratado neste trabalho, delineando o problema de pesquisa e os objetivos estabelecidos. No Capítulo 2, é feita uma revisão bibliográfica relevante ao tema. O Capítulo 3 consiste no desenvolvimento do trabalho, detalhando a coleta dos requisitos do sistema e alguns diagramas \ac{UML}. Além disso, este capítulo descreve as interfaces do sistema e o funcionamento de cada tela. No Capítulo 4, é abordada a metodologia utilizada para avaliar o sistema, bem como para mensurar a qualidade do sistema. Os resultados dessa avaliação também são discutidos nesta seção. Por fim, o Capítulo 5 apresenta as conclusões do projeto.
