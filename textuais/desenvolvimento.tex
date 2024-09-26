@@ -295,60 +295,64 @@ Inicialmente, foi necessário definir a estrutura de dados para a Vitrine de Art
 	\legend{Fonte: o autor}
 \end{figure}
 
+
+
 \subsubsection{Escola de Artes}
 
 O modelo de dados para a Escola de Artes é estruturado de forma a atender às diversas necessidades operacionais e acadêmicas da instituição. Este modelo é essencial para o gerenciamento eficaz dos cursos, alunos, responsáveis, professores, e outros aspectos relacionados ao bom funcionamento da escola.
 
-A base do modelo é o Curso, que representa as disciplinas oferecidas pela escola. Cada curso é caracterizado pelo nome, disciplina, turno e número de vagas disponíveis. As disciplinas são limitadas a um conjunto fixo, incluindo opções como Capoeira, Violão e Pintura e Desenho. O turno do curso pode ser Manhã, Tarde ou Noite, e o número de vagas é validado para garantir que se mantenha dentro de um intervalo apropriado.
-
-Os Responsáveis são os indivíduos que, muitas vezes, são os pais ou responsáveis legais dos alunos. Cada responsável possui informações detalhadas como nome, CPF, data de nascimento, e-mail, endereço e telefone. Além disso, o modelo inclui a capacidade de anexar documentos relevantes e gerar um link único para configurar o acesso ao sistema através do modelo User do Django, com uma relação de um-para-um. A associação de um responsável com um aluno é feita através do campo responsavel, permitindo múltiplos responsáveis para cada aluno, se necessário.
-
-O modelo de Aluno captura informações abrangentes sobre os estudantes, incluindo nome, CPF, RG, data de nascimento, e-mail, endereço e telefone. Os alunos podem ter documentos anexados e, caso sejam dependentes, são vinculados a responsáveis através de uma relação de muitos-para-muitos. Cada aluno também possui um link único para configurar o acesso ao sistema através do modelo User do Django com uma relação de um-para-um, caso ele não seja um dependente.
-
-Os Professores são representados com detalhes como nome, especialidade, e-mail e telefone. Eles são associados aos cursos através das turmas e têm uma relação de um-para-um com o modelo User do Django, permitindo o gerenciamento de suas credenciais de acesso.
+A base do modelo é o Curso, que representa as disciplinas oferecidas pela escola. Cada curso é caracterizado pelo nome, disciplina, turno e número de vagas disponíveis. As disciplinas são definidas pelo modelo Disciplina, que pode incluir opções como Capoeira, Violão e Pintura e Desenho. O turno do curso pode ser Manhã, Tarde ou Noite, e o número de vagas é validado para garantir que se mantenha dentro de um intervalo apropriado.
 
 As Turmas são associadas a um curso e a um professor, e podem ter vários alunos. Cada turma possui um nome e horário específicos, facilitando a organização das aulas e a alocação dos recursos.
 
-O Diário de Classe é um registro diário das atividades da turma. Cada entrada no diário está associada a uma turma específica e a uma data, proporcionando uma visão detalhada do progresso e das atividades da turma ao longo do tempo. O data do diário é adicionada automaticamente de acordo com o dia atual no momento da criação do diário.
+Os Professores são representados com detalhes como nome, especialidade, e-mail e telefone. Eles são associados aos cursos através das turmas e têm uma relação de um-para-um com o modelo User do Django, permitindo o gerenciamento de suas credenciais de acesso.
+
+O modelo de Aluno captura informações abrangentes sobre os estudantes, incluindo nome, CPF, RG, data de nascimento, e-mail, endereço e telefone. Os alunos podem ter documentos anexados e, caso sejam dependentes, são vinculados a responsáveis através de uma relação de um-para-um. Cada aluno também possui um link único para configurar o acesso ao sistema através do modelo User do Django com uma relação de um-para-um, caso ele não seja um dependente.
+
+Os Responsáveis são os indivíduos que, muitas vezes, são os pais ou responsáveis legais dos alunos. Cada responsável possui informações detalhadas como nome, CPF, data de nascimento, e-mail, endereço e telefone. Além disso, o modelo inclui a capacidade de anexar documentos relevantes e gerar um link único para configurar o acesso ao sistema através do modelo User do Django, com uma relação de um-para-um. A associação de um responsável com um aluno é feita através do campo responsavel, permitindo apenas um responsável para cada aluno.
 
 Para registrar ocorrências, acompanhar a frequência e a pontuação dos alunos, foram criados os modelos Ocorrência, Frequência e Pontuação. O modelo de Ocorrência documenta eventos específicos que afetam um aluno em um determinado dia, enquanto o modelo de Frequência rastreia a presença dos alunos e permite justificativas para ausências. A Pontuação avalia o desempenho dos alunos em diferentes aspectos, como assiduidade, comportamento e aptidão. Esses dados são críticos para monitorar o progresso dos alunos e identificar áreas que necessitam de atenção.
+
+O Diário de Classe é um registro diário das atividades da turma. Cada entrada no diário está associada a uma turma específica e a uma data, proporcionando uma visão detalhada do progresso e das atividades da turma ao longo do tempo. A data do diário é adicionada automaticamente de acordo com o dia atual no momento da criação do diário, mas pode ser modificada caso seja necessário. Esse modelo agrupa as informações das ocorrências, frequência e pontuação para um determinado dia de aula.
 
 Finalmente, o modelo de Inscrição registra as inscrições dos alunos em cursos específicos, incluindo observações adicionais e a data de inscrição. Este modelo garante que o processo de matrícula seja registrado de maneira estruturada e eficiente. Abaixo está descrito com mais detalhes o diagrama ER da Escola de artes.
 
 
 \begin{figure}[htb]
-	\centering
-	 \begin{minipage}{0.4\textwidth}
-	   \centering
-	   \caption{Diagrama ER da Escola de Artes} \label{er_diagram_escola}
-	   \includegraphics[scale=0.25]{./img/er_diagram_escola.png}
-	   \legend{Fonte: Produzido pelo autor}
-	 \end{minipage}
-   \end{figure}
+	\caption{\label{fig_grafico}Diagrama ER da Escola de Artes}
+	\begin{center}
+	    \includegraphics[scale=0.3]{./img/er_diagram_escola.png}
+	\end{center}
+	\legend{Fonte: o autor}
+\end{figure}
 
 \subsubsection{Editais}
 
 O modelo de dados para a seção de Editais é crucial para a gestão e operacionalização de processos seletivos e inscrições dentro do sistema. Este conjunto de modelos foi desenvolvido para facilitar a criação, gerenciamento e inscrição em editais, bem como para a comunicação eficiente com os participantes.
 
-O Edital é a entidade fundamental do sistema, representando um processo seletivo ou oportunidade de inscrição. Cada edital possui um título, uma descrição detalhada, um período de inscrição definido por uma data e hora de início e término, e um status que pode ser "Aberto", "Fechado" ou "Indisponível". O status do edital é dinamicamente atualizado através do método "atualizar\_status", que compara a data e hora atuais com o período de inscrição para determinar se o edital está aberto para novas inscrições. Caso o edital esteja fora do período de inscrição, seu status é atualizado para "Fechado".
+O Edital é a entidade fundamental do sistema, representando um processo seletivo ou oportunidade de inscrição. Cada edital possui um título, uma descrição detalhada, uma categoria, um período de inscrição definido por uma data e hora de início e término, e um status que pode ser "Aberto", "Fechado" ou "Indisponível". O status do edital é dinamicamente atualizado através do método "atualizar\_status", que compara a data e hora atuais com o período de inscrição para determinar se o edital está aberto para novas inscrições. Caso o edital esteja fora do período de inscrição, seu status é atualizado para "Fechado".
 
 O modelo de Inscrição é utilizado para registrar as inscrições de candidatos em editais específicos. Cada inscrição está associada a um edital e contém informações do candidato, como nome, e-mail e um documento de apoio. Além disso, a inscrição inclui um campo de protocolo único, gerado com base no ID do edital, ID do usuário e ID da própria inscrição. Esse protocolo é atribuído no momento da criação da inscrição. O modelo também possui um campo para marcar a aprovação da inscrição e, se aprovado, um e-mail de chamamento é enviado ao candidato, informando-o sobre sua aprovação.
 
 A classe EditaisPage é uma página do Wagtail que exibe uma lista de editais disponíveis. Esta página usa um template para apresentar a lista de editais e permite personalizar o título da página. O método get\_context é usado para adicionar todos os editais ao contexto da página, garantindo que a lista mais atualizada de editais esteja disponível para visualização.
 
-Similarmente, a EditailInscreverPage é uma página do Wagtail dedicada aos detalhes de um edital específico, permitindo que os usuários visualizem informações detalhadas sobre o edital e se inscrevam. Esta página também utiliza um template e permite a personalização do título. O método get\_context é utilizado para fornecer o contexto necessário, incluindo todos os editais disponíveis.
+Similarmente, a EditailInscreverPage é uma página do Wagtail dedicada aos detalhes de um edital específico, permitindo que os usuários visualizem informações detalhadas sobre o edital e se inscrevam. Esta página também utiliza um template e permite a personalização do título. O método get\_context é utilizado para fornecer o contexto necessário, daquele edital específico.
 
 Este conjunto de modelos fornece uma estrutura robusta para o gerenciamento de editais e inscrições, garantindo que as informações sejam mantidas de forma organizada e acessível. Além disso, as funcionalidades integradas de atualização de status e envio de e-mails ajudam a manter a comunicação fluida e eficiente com os participantes, enquanto as páginas do Wagtail oferecem uma interface amigável para a visualização e interação com os editais.
 
 \begin{figure}[htb]
-	\centering
-	 \begin{minipage}{0.4\textwidth}
-	   \centering
-	   \caption{Diagrama ER dos Editais} \label{er_diagram_editais}
-	   \includegraphics[scale=0.5]{./img/er_diagram_editais.png}
-	   \legend{Fonte: Produzido pelo autor}
-	 \end{minipage}
-   \end{figure}
+	\caption{\label{fig_grafico}Diagrama ER dos Editais}
+	\begin{center}
+	    \includegraphics[scale=0.3]{./img/er_diagram_editais.png}
+	\end{center}
+	\legend{Fonte: o autor}
+\end{figure}
 
 
 \subsection{Integração com o site}
+
+A plataforma desenvolvida para a Casa de Cultura de João Monlevade utiliza o SQLite3 como banco de dados principal nesta fase inicial do projeto. A escolha pelo SQLite3 foi motivada por sua simplicidade, eficiência e fácil integração com projetos de menor escala, como o atual. Esse banco de dados relacional armazena todas as informações em um único arquivo de disco, o que elimina a necessidade de um servidor dedicado, simplificando tanto a configuração quanto a manutenção do ambiente de desenvolvimento.
+
+O SQLite3 oferece diversas vantagens, especialmente para protótipos e aplicações de pequeno porte. Sua leveza e facilidade de uso são fundamentais neste contexto, permitindo que o projeto avance sem a sobrecarga de gerenciar bancos de dados mais complexos. Além disso, o Django, framework utilizado no desenvolvimento do site, já traz o SQLite3 como banco de dados padrão, facilitando a integração com o Wagtail e o Wagtail CRX, ambos essenciais para a estrutura e gerenciamento de conteúdo da plataforma. A execução de migrações e modificações no banco de dados também se torna direta, aproveitando as ferramentas nativas do Django.
+
+Apesar dos benefícios imediatos do SQLite3, é importante considerar que o projeto tem potencial para crescer, tanto em volume de dados quanto em complexidade. Nesse sentido, a plataforma foi projetada com a flexibilidade necessária para que, no futuro, o SQLite3 possa ser substituído por um banco de dados mais robusto, como PostgreSQL ou MySQL, com o mínimo de reestruturação. A transição entre esses sistemas é facilitada pelo uso de SQL como linguagem padrão em bancos relacionais, permitindo que alterações no código e na infraestrutura sejam feitas de maneira gradual e eficiente, conforme as necessidades da plataforma evoluam.
