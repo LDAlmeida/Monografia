@@ -106,7 +106,7 @@ O Django admin foi configurado para exibir as informações dos artistas em um l
 \begin{figure}[htb]
 	\caption{\label{fig_adm_vitrine}Página de administração da Vitrine de Artistas}
 	\begin{center}
-	    \includegraphics[scale=0.45]{./img/admin_artista.png}
+	    \includegraphics[scale=0.3]{./img/admin_artista.png}
 	\end{center}
 	\legend{Fonte: o autor}
 \end{figure}
@@ -120,7 +120,7 @@ A implementação envolveu o uso de grids de cards do Bootstrap, ajustados para 
 \begin{figure}[htb]
 	\caption{\label{fig_vitrine}Página da Vitrine de Artistas}
 	\begin{center}
-	    \includegraphics[scale=0.35]{./img/vitrine_de_artistas.png}
+	    \includegraphics[scale=0.3]{./img/vitrine_de_artistas.png}
 	\end{center}
 	\legend{Fonte: o autor}
 \end{figure}
@@ -131,7 +131,7 @@ Para melhorar a interatividade da Vitrine de Artistas, foi implementado um siste
 \begin{figure}[htb]
 	\caption{\label{fig_grafico}Efeito flutuante}
 	\begin{center}
-	    \includegraphics[scale=0.5]{./img/vitrine_de_artistas_hover.png}
+	    \includegraphics[scale=0.35]{./img/vitrine_de_artistas_hover.png}
 	\end{center}
 	\legend{Fonte: o autor}
 \end{figure}
@@ -157,7 +157,7 @@ Essa funcionalidade foi implementada utilizando as ferramentas nativas do Django
 \begin{figure}[htb]
 	\caption{\label{fig_grafico}Acesso do professor}
 	\begin{center}
-	    \includegraphics[scale=0.5]{./img/admin_professor.png}
+	    \includegraphics[scale=0.3]{./img/admin_professor.png}
 	\end{center}
 	\legend{Fonte: o autor}
 \end{figure}
@@ -171,7 +171,7 @@ Outro processo que agora foi melhorado é o de inscrição em turmas. Acessando 
 \begin{figure}[htb]
 	\caption{\label{fig_grafico}Lista de vagas disponíveis}
 	\begin{center}
-	    \includegraphics[scale=0.5]{./img/lista_turmas.png}
+	    \includegraphics[scale=0.25]{./img/lista_turmas.png}
 	\end{center}
 	\legend{Fonte: o autor}
 \end{figure}
@@ -197,7 +197,7 @@ Através da página administrativa, o funcionário da casa de cultura poderá vi
 \begin{figure}[htb]
 	\caption{\label{fig_grafico}Página administrativa dos editais}
 	\begin{center}
-	    \includegraphics[scale=0.45]{./img/admin_edital.png}
+	    \includegraphics[scale=0.35]{./img/admin_edital.png}
 	\end{center}
 	\legend{Fonte: o autor}
 \end{figure}
@@ -214,7 +214,7 @@ Em uma página própria, o usuário poderá ver todos os editais já publicados 
 \begin{figure}[htb]
 	\caption{\label{fig_grafico}Lista de editais}
 	\begin{center}
-	    \includegraphics[scale=0.35]{./img/lista_editais.png}
+	    \includegraphics[scale=0.25]{./img/lista_editais.png}
 	\end{center}
 	\legend{Fonte: o autor}
 \end{figure}
@@ -259,7 +259,7 @@ A estrutura de um banco de dados, fundamental para qualquer aplicação web, def
 
 \subsubsection{Vitrine de Artistas}
 
-Inicialmente, foi necessário definir a estrutura de dados para a Vitrine de Artistas, considerando as necessidades de armazenamento e apresentação de informações sobre os artistas locais. Foram criados modelos no Django para representar esses dados de maneira organizada e eficiente. Cada artista poderia ter informações como Nome, Nome Artístico, Área de Atuação, Links para portfólios ou redes sociais, documentos, imagens e uma categorização por área de atuação.
+Inicialmente, foi necessário definir a estrutura de dados para a Vitrine de Artistas, considerando as necessidades de armazenamento e apresentação de informações sobre os artistas locais. Foram criados modelos no Django para representar esses dados de maneira organizada e eficiente. 
 
 \begin{figure}[htb]
 	\caption{\label{fig_grafico}Diagrama ER da Vitrine de Artistas}
@@ -269,6 +269,8 @@ Inicialmente, foi necessário definir a estrutura de dados para a Vitrine de Art
 	\legend{Fonte: o autor}
 \end{figure}
 
+Cada artista poderia ter informações como Nome, Nome Artístico, Área de Atuação, Links para portfólios ou redes sociais, documentos, imagens e uma categorização por área de atuação.
+
 
 
 \subsubsection{Escola de Artes}
@@ -276,6 +278,14 @@ Inicialmente, foi necessário definir a estrutura de dados para a Vitrine de Art
 O modelo de dados para a Escola de Artes é estruturado de forma a atender às diversas necessidades operacionais e acadêmicas da instituição. Este modelo é essencial para o gerenciamento eficaz dos cursos, alunos, responsáveis, professores, e outros aspectos relacionados ao bom funcionamento da escola.
 
 A base do modelo é o Curso, que representa as disciplinas oferecidas pela escola. Cada curso é caracterizado pelo nome, disciplina, turno e número de vagas disponíveis. As disciplinas são definidas pelo modelo Disciplina, que pode incluir opções como Capoeira, Violão e Pintura e Desenho. O turno do curso pode ser Manhã, Tarde ou Noite, e o número de vagas é validado para garantir que se mantenha dentro de um intervalo apropriado.
+
+\begin{figure}[htb]
+	\caption{\label{fig_grafico}Diagrama ER da Escola de Artes}
+	\begin{center}
+	    \includegraphics[scale=0.3]{./img/er_diagram_escola.png}
+	\end{center}
+	\legend{Fonte: o autor}
+\end{figure}
 
 As Turmas são associadas a um curso e a um professor, e podem ter vários alunos. Cada turma possui um nome e horário específicos, facilitando a organização das aulas e a alocação dos recursos.
 
@@ -290,15 +300,6 @@ Para registrar ocorrências, acompanhar a frequência e a pontuação dos alunos
 O Diário de Classe é um registro diário das atividades da turma. Cada entrada no diário está associada a uma turma específica e a uma data, proporcionando uma visão detalhada do progresso e das atividades da turma ao longo do tempo. A data do diário é adicionada automaticamente de acordo com o dia atual no momento da criação do diário, mas pode ser modificada caso seja necessário. Esse modelo agrupa as informações das ocorrências, frequência e pontuação para um determinado dia de aula.
 
 Finalmente, o modelo de Inscrição registra as inscrições dos alunos em cursos específicos, incluindo observações adicionais e a data de inscrição. Este modelo garante que o processo de matrícula seja registrado de maneira estruturada e eficiente. Abaixo está descrito com mais detalhes o diagrama ER da Escola de artes.
-
-
-\begin{figure}[htb]
-	\caption{\label{fig_grafico}Diagrama ER da Escola de Artes}
-	\begin{center}
-	    \includegraphics[scale=0.3]{./img/er_diagram_escola.png}
-	\end{center}
-	\legend{Fonte: o autor}
-\end{figure}
 
 \subsubsection{Editais}
 
