@@ -32,7 +32,7 @@ Diversos métodos foram aplicados para validar os critérios de avaliação esta
 
 \subsection{Testes de Funcionalidade} 
 
-Foram realizados testes automatizados utilizando o framework Django, focando nas funcionalidades do sistema. Esses testes asseguraram que os modelos e as visualizações do site estivessem operando conforme o esperado. Por exemplo, foi validada a criação de editais, incluindo a verificação se os dados do edital estavam sendo armazenados corretamente e se as visualizações da lista de editais e detalhes estavam acessíveis aos usuários. Além disso, o sistema de inscrição online foi testado para garantir que as inscrições fossem processadas corretamente e registradas no banco de dados. Esses testes garantem que a nova funcionalidade não apenas substitui o uso anterior de formulários do Google, mas também otimiza a seleção e organização de eventos culturais, aumentando a eficiência e a transparência das informações.
+Foram realizados testes automatizados utilizando o \textit{framework} Django, focando nas funcionalidades do sistema. Esses testes asseguraram que os modelos e as visualizações do site estivessem operando conforme o esperado. Por exemplo, foi validada a criação de editais, incluindo a verificação se os dados do edital estavam sendo armazenados corretamente e se as visualizações da lista de editais e detalhes estavam acessíveis aos usuários. Além disso, o sistema de inscrição \textit{online} foi testado para garantir que as inscrições fossem processadas corretamente e registradas no banco de dados. Esses testes garantem que a nova funcionalidade não apenas substitui o uso anterior de formulários do Google, mas também otimiza a seleção e organização de eventos culturais, aumentando a eficiência e a transparência das informações.
 
 \subsection{Testes de Usabilidade}
 
@@ -58,7 +58,7 @@ Foram utilzadas ferramentas automatizadas de avaliação de sites web. O teste r
 
 No entanto, é importante reforçar que esses resultados representam o pior caso. O desempenho da plataforma será consideravelmente melhor quando o site for hospedado pela Prefeitura, que oferecerá mais recursos computacionais e de infraestrutura. Essa migração não só melhorará a velocidade de carregamento, mas também permitirá a implementação de novas funcionalidades que dependem de maior capacidade de processamento.
 
-O código-fonte do site também foi submetido a testes utilizando a ferramenta Validator \cite{Validator}. A partir dela, detectou-se uma oportunidade de melhoria na organização dos scripts, como pode ser verificado abaixo. Após a refatoração do código, utilizando as boas práticas e reorganizando a importação dos scripts, foi verificada a resolução do problema. Essa etapa de otimização é crucial para garantir a escalabilidade da plataforma, permitindo que ela suporte um aumento no número de usuários sem comprometer o desempenho.
+O código-fonte do site também foi submetido a testes utilizando a ferramenta Validator \cite{Validator}. A partir dela, detectou-se uma oportunidade de melhoria na organização dos \textit{scripts}, como pode ser verificado abaixo. Após a refatoração do código, utilizando as boas práticas e reorganizando a importação dos \textit{scripts}, foi verificada a resolução do problema. Essa etapa de otimização é crucial para garantir a escalabilidade da plataforma, permitindo que ela suporte um aumento no número de usuários sem comprometer o desempenho.
 
 \begin{figure}[htb]
     \label{teste}
@@ -80,7 +80,7 @@ O código-fonte do site também foi submetido a testes utilizando a ferramenta V
 
 \subsection{Testes de Segurança}
 
-Os logs gerados por duas plataformas de teste de segurança online foram analizados e ambas não detectaram nenhum risco médio ou grave presente no site, o que demonstra uma preocupação constante com a segurança da informação. O teste realizado pela plataforma Pentest Tools \cite{Pentest} identificou quatro considerações de nível baixo. Essas questões estão relacionadas ao certificado de segurança do site, à falta de ofuscação das tecnologias utilizadas e à visibilidade do arquivo robots.txt, que orienta os \textit{web crawlers} sobre quais \ac{URLs} e \textit{endpoints} da aplicação podem ser acessados.
+Os \textit{logs} gerados por duas plataformas de teste de segurança \textit{online} foram analizados e ambas não detectaram nenhum risco médio ou grave presente no site, o que demonstra uma preocupação constante com a segurança da informação. O teste realizado pela plataforma Pentest Tools \cite{Pentest} identificou quatro considerações de nível baixo. Essas questões estão relacionadas ao certificado de segurança do site, à falta de ofuscação das tecnologias utilizadas e à visibilidade do arquivo robots.txt, que orienta os \textit{web crawlers} sobre quais \ac{URLs} e \textit{endpoints} da aplicação podem ser acessados.
 
 \begin{figure}[htb] \caption{\label{fig_grafico}Teste do Pentest Tools} \begin{center} \includegraphics[scale=0.3]{./img/pentest.png} \end{center} \legend{Fonte: o autor} \end{figure}
 
@@ -95,6 +95,6 @@ Esses testes de segurança não apenas garantem a integridade da plataforma, mas
 
 Os resultados dos testes automatizados indicam que a plataforma atende aos critérios de funcionalidade estabelecidos no início do projeto. As funcionalidades principais operam corretamente, e os testes demonstraram que a interface é intuitiva e acessível. Em relação ao desempenho, o sistema mostrou-se robusto, respondendo adequadamente aos testes simulados, com apenas pequenos ajustes necessários para otimizar o código-fonte em questões pontuais.
 
-Quanto à segurança, os testes não revelaram vulnerabilidades críticas, e as medidas de proteção dos dados se mostraram eficazes. Porém, será necessário que no momento da implantação do site sejam implementadas rotinas de backup automáticas e mecanismos de autenticação robustos ao servidores para garantir a integridade das informações.
+Quanto à segurança, os testes não revelaram vulnerabilidades críticas, e as medidas de proteção dos dados se mostraram eficazes. Porém, será necessário que no momento da implantação do site sejam implementadas rotinas de \textit{backup} automáticas e mecanismos de autenticação robustos ao servidores para garantir a integridade das informações.
 
 Em resumo, a plataforma da Casa de Cultura de João Monlevade se mostrou eficiente nos testes realizados, com bom desempenho, usabilidade adequada e segurança confiável, estando apta a ser utilizada pelos artistas locais e administradores da instituição.
