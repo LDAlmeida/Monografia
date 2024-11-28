@@ -10,7 +10,7 @@ Para a modelagem e estruturação do sistema, foram utilizados os conceitos da U
 
 \section{Modelo Conceitual}
 
-O modelo conceitual proposto para o desenvolvimento do site web da Casa de Cultura de João Monlevade é estruturado para atender às necessidades específicas da instituição e da comunidade, proporcionando uma plataforma digital funcional, intuitiva e centrada na valorização da cultura local.
+O modelo conceitual proposto para o desenvolvimento do site web da Casa de Cultura de João Monlevade é estruturado para atender às necessidades específicas da instituição e da comunidade, proporcionando uma plataforma digital funcional, intuitiva e centrada na valorização da cultura local. Foi feito um levantamento de requisitos junto à Casa de Cultura no formato de entrevista, permitindo identificar as demandas e expectativas dos gestores e usuários, o que orientou a criação de funcionalidades alinhadas às necessidades reais da instituição.
 
 \subsection{Estrutura Geral do Site}
 
@@ -80,7 +80,7 @@ O código do \textit{template} foi colocado no arquivo carousel\_block.html, den
 	\begin{center}
 	    \includegraphics[scale=0.35]{./img/pagina_principal.png}
 	\end{center}
-	\legend{Fonte: o autor}
+	\legend{Elaborado pelo autor desta pesquisa, 2024}
 \end{figure}
 
 
@@ -106,9 +106,9 @@ O Django admin foi configurado para exibir as informações dos artistas em um \
 \begin{figure}[htb]
 	\caption{\label{fig_adm_vitrine}Página de administração da Vitrine de Artistas}
 	\begin{center}
-	    \includegraphics[scale=0.3]{./img/admin_artista.png}
+	    \includegraphics[scale=0.5]{./img/admin_artista.png}
 	\end{center}
-	\legend{Fonte: o autor}
+	\legend{Elaborado pelo autor desta pesquisa, 2024}
 \end{figure}
 
 \subsubsection{Exibição dos Artistas no Website}
@@ -120,20 +120,20 @@ A implementação envolveu o uso de grids de \textit{cards} do Bootstrap, ajusta
 \begin{figure}[htb]
 	\caption{\label{fig_vitrine}Página da Vitrine de Artistas}
 	\begin{center}
-	    \includegraphics[scale=0.3]{./img/vitrine_de_artistas.png}
+	    \includegraphics[scale=0.4]{./img/vitrine_de_artistas.png}
 	\end{center}
-	\legend{Fonte: o autor}
+	\legend{Elaborado pelo autor desta pesquisa, 2024}
 \end{figure}
 
-Para melhorar a interatividade da Vitrine de Artistas, foi implementado um sistema onde o card inteiro seria clicável, redirecionando o usuário para uma página com mais detalhes sobre o artista selecionado. Isso foi feito utilizando \ac{HTML} padrão e funcionalidades nativas do Bootstrap, sem a necessidade de \ac{CSS} personalizado.
+Para melhorar a interatividade da Vitrine de Artistas, foi implementado um sistema onde o card inteiro seria clicável, redirecionando o usuário para uma página com mais detalhes sobre o artista selecionado. Isso foi feito utilizando \ac{HTML} padrão e funcionalidades nativas do Bootstrap, sem a necessidade de \ac{CSS} personalizado (\autoref{fig_flutuante}).
 
 
 \begin{figure}[htb]
-	\caption{\label{fig_grafico}Efeito flutuante}
+	\caption{\label{fig_flutuante}Efeito flutuante}
 	\begin{center}
 	    \includegraphics[scale=0.35]{./img/vitrine_de_artistas_hover.png}
 	\end{center}
-	\legend{Fonte: o autor}
+	\legend{Elaborado pelo autor desta pesquisa, 2024}
 \end{figure}
 
 Com a implementação da Vitrine de Artistas, o website da Casa de Cultura de João Monlevade passa a contar com uma plataforma robusta para a divulgação dos artistas locais. A utilização de tecnologias como Django, Wagtail e Bootstrap permitiu a criação de um sistema que combina funcionalidade e estética, proporcionando uma experiência de usuário agradável e intuitiva.
@@ -152,28 +152,28 @@ Além disso, foi implementado um sistema que permitia a criação de usuários n
 
 Um dos desafios enfrentados foi o controle de acesso às informações de alunos e turmas. O sistema foi configurado para garantir que cada usuário, ao fazer \textit{login} no site, só pudesse visualizar os dados referentes a si mesmo ou aos alunos sob sua responsabilidade.
 
-Essa funcionalidade foi implementada utilizando as ferramentas nativas do Django para controle de permissões, onde cada usuário tinha seu acesso limitado aos dados específicos com base em seu papel (aluno ou responsável). Esse controle foi estendido para o Diário de Classe, garantindo que os registros fossem mantidos privados e acessíveis apenas aos professores responsáveis e aos administradores do sistema.
+Essa funcionalidade foi implementada utilizando as ferramentas nativas do Django para controle de permissões, onde cada usuário tinha seu acesso limitado aos dados específicos com base em seu papel (aluno ou responsável). Esse controle foi estendido para o Diário de Classe, garantindo que os registros fossem mantidos privados e acessíveis apenas aos professores responsáveis e aos administradores do sistema. Na \autoref{fig_professor}, as restrições podem ser vistas em prática para um usuário professor.
 
 \begin{figure}[htb]
-	\caption{\label{fig_grafico}Acesso do professor}
+	\caption{\label{fig_professor}Acesso do professor}
 	\begin{center}
-	    \includegraphics[scale=0.3]{./img/admin_professor.png}
+	    \includegraphics[scale=0.5]{./img/admin_professor.png}
 	\end{center}
-	\legend{Fonte: o autor}
+	\legend{Elaborado pelo autor desta pesquisa, 2024}
 \end{figure}
 
 \subsubsection{Exibição de vagas no site}
 
 O desenvolvimento do sistema de gestão da Escola de Artes traz diversas melhorias operacionais e administrativas para a Casa de Cultura de João Monlevade. A centralização dos dados e o controle de acesso eficiente permite que a administração da escola seja realizada de forma mais organizada e segura, garantindo a privacidade e a integridade dos dados dos alunos.
 
-Outro processo que agora foi melhorado é o de inscrição em turmas. Acessando uma página dedicada no site, o usuário pode visualizar as turmas que estão com inscrições abertas e se inscrever através do próprio site, através de um formulário simplificado. Isso foi possível apartir da construção de um \textit{template} de página específico para essa funcionalidade, que também foi reutilizado em outra parte do sistema, a de editais.
+Outro processo que agora foi melhorado é o de inscrição em turmas. Acessando uma página dedicada no site, o usuário pode visualizar as turmas que estão com inscrições abertas e se inscrever através do próprio site, através de um formulário simplificado. Isso foi possível a partir da construção de um \textit{template} de página específico para essa funcionalidade, que também foi reutilizado em outra parte do sistema, a de editais (\autoref{fig_vagas}).
 
 \begin{figure}[htb]
-	\caption{\label{fig_grafico}Lista de vagas disponíveis}
+	\caption{\label{fig_vagas}Lista de vagas disponíveis}
 	\begin{center}
-	    \includegraphics[scale=0.25]{./img/lista_turmas.png}
+	    \includegraphics[scale=0.5]{./img/lista_turmas.png}
 	\end{center}
-	\legend{Fonte: o autor}
+	\legend{Elaborado pelo autor desta pesquisa, 2024}
 \end{figure}
 
 A integração com o Django admin e o sistema de inscrições \textit{online} também facilita o processo de matrícula e acompanhamento dos alunos, oferecendo uma plataforma moderna e intuitiva tanto para os administradores quanto para os usuários finais.
@@ -186,20 +186,20 @@ Publicação de Editais: A Casa de Cultura pode publicar editais diretamente no 
 
 Inscrições para Editais: Os usuários do site podem se inscrever nos editais diretamente pela plataforma. A funcionalidade inclui a possibilidade de preenchimento de formulários \textit{online} e upload de documentos exigidos, facilitando o processo de inscrição e garantindo que todas as submissões sejam centralizadas.
 
-Gerenciamento dos Editais: Também após a inscrição, as informações do candidato ficam salvas no banco de dados do sistema de gestão. Apartir disso, a Casa de Cultura poderá aprovar ou nao sua candidatura à aquele edital.
+Gerenciamento dos Editais: Também após a inscrição, as informações do candidato ficam salvas no banco de dados do sistema de gestão. A partir disso, a Casa de Cultura poderá aprovar ou nao sua candidatura à aquele edital.
 
 \subsubsection{Interface do Django admin}
 
 A gestão desses modelos também foi adicionada no Django admin, com uma interface personalizada para facilitar a administração dos dados relacionados aos editais. A configuração do Django admin foi feita de maneira a permitir uma visualização clara e organizada das candidaturas e editais publicados.
 
-Através da página administrativa, o funcionário da casa de cultura poderá visualizar, criar, editar e deletar novos ou presentes editais, além de aprovar ou não candidaturas a estes. Também é possível visualizar todos os documentos referentes aos editais, tanto da sua publicação quanto dos candidatos. Também foram criados filtros que melhoram a usabilidade da ferramenta.
+Através da página administrativa, o funcionário da casa de cultura poderá visualizar, criar, editar e deletar novos ou presentes editais, além de aprovar ou não candidaturas a estes. Também é possível visualizar todos os documentos referentes aos editais, tanto da sua publicação quanto dos candidatos. Também foram criados filtros que melhoram a usabilidade da ferramenta (\autoref{fig_admin_editais}).
 
 \begin{figure}[htb]
-	\caption{\label{fig_grafico}Página administrativa dos editais}
+	\caption{\label{fig_admin_editais}Página administrativa dos editais}
 	\begin{center}
-	    \includegraphics[scale=0.35]{./img/admin_edital.png}
+	    \includegraphics[scale=0.5]{./img/admin_edital.png}
 	\end{center}
-	\legend{Fonte: o autor}
+	\legend{Elaborado pelo autor desta pesquisa, 2024}
 \end{figure}
 
 
@@ -209,24 +209,24 @@ Um dos desafios enfrentados foi justamente o gerenciamento de múltiplos documen
 
 Similarmente a Escola de Artes, a seção de editais no site da Casa de Cultura surge como uma grande ferramenta para os processos administrativos, também mostrando-se de extrema importância para a população, que poderá ter o acesso aos status dos editais publicados pela fundação.
 
-Em uma página própria, o usuário poderá ver todos os editais já publicados e aqueles que estão abertos, os quais poderá se canditadar através do próprio site.
+Em uma página própria, o usuário poderá ver todos os editais já publicados e aqueles que estão abertos, os quais poderá se candidatar através do próprio site (\autoref{fig_lista_editais}).
 
 \begin{figure}[htb]
-	\caption{\label{fig_grafico}Lista de editais}
+	\caption{\label{fig_lista_editais}Lista de editais}
 	\begin{center}
-	    \includegraphics[scale=0.25]{./img/lista_editais.png}
+	    \includegraphics[scale=0.4]{./img/lista_editais.png}
 	\end{center}
-	\legend{Fonte: o autor}
+	\legend{Elaborado pelo autor desta pesquisa, 2024}
 \end{figure}
 
-A integração com o Django admin e o sistema de inscrições \textit{online} também facilita o processo de matrícula e acompanhamento dos alunos, oferecendo uma plataforma moderna e intuitiva tanto para os administradores quanto para os usuários finais. A inscrição através de um formulário simplificado no site torna a experiência simples e agradável.
+A integração com o Django admin e o sistema de inscrições \textit{online} também facilita o processo de matrícula e acompanhamento dos alunos, oferecendo uma plataforma moderna e intuitiva tanto para os administradores quanto para os usuários finais. A inscrição através de um formulário simplificado no site torna a experiência simples e agradável (\autoref{fig_form_editais}).
 
 \begin{figure}[htb]
-	\caption{\label{fig_grafico}Formulário de um edital}
+	\caption{\label{fig_form_editais}Formulário de um edital}
 	\begin{center}
-	    \includegraphics[scale=0.3]{./img/form_edital.png}
+	    \includegraphics[scale=0.5]{./img/form_edital.png}
 	\end{center}
-	\legend{Fonte: o autor}
+	\legend{Elaborado pelo autor desta pesquisa, 2024}
 \end{figure}
 
 \section{Arquitetura do Site Web}
@@ -249,7 +249,7 @@ O desenvolvimento do site da Casa de Cultura de João Monlevade envolveu a aplic
 
 A capacidade de personalização oferecida pelos \textit{templates} do Django permite que cada detalhe do \textit{layout} e da navegação seja ajustado para refletir com precisão a identidade visual da Casa de Cultura, resultando em uma experiência de usuário intuitiva e envolvente. A combinação dessas tecnologias proporciona um site funcional, esteticamente atraente e fácil de navegar, contribuindo para uma presença digital impactante e eficaz.
 
-Para a customização do carrossel padrão do Wagtail CRX, foi implementado o SlickSlider, modificando o \textit{template} do mesmo. A Vitrine de Artistas também utiliza um \textit{template}, por sua vez, desenvolvido pelo autor para este uso específico usando Bootstrap e \ac{CSS}. Outras seções que utilzaram \textit{templates} foram a listagem de editais e de turmas disponíveis.
+Para a customização do carrossel padrão do Wagtail CRX, foi implementado o SlickSlider, modificando o \textit{template} do mesmo. A Vitrine de Artistas também utiliza um \textit{template}, por sua vez, desenvolvido pelo autor para este uso específico usando Bootstrap e \ac{CSS}. Outras seções que utilizaram \textit{templates} foram a listagem de editais e de turmas disponíveis.
 
 \section{Banco de Dados}
 
@@ -259,14 +259,14 @@ A estrutura de um banco de dados, fundamental para qualquer aplicação web, def
 
 \subsubsection{Vitrine de Artistas}
 
-Inicialmente, foi necessário definir a estrutura de dados para a Vitrine de Artistas, considerando as necessidades de armazenamento e apresentação de informações sobre os artistas locais. Foram criados modelos no Django para representar esses dados de maneira organizada e eficiente. 
+Inicialmente, foi necessário definir a estrutura de dados para a Vitrine de Artistas, considerando as necessidades de armazenamento e apresentação de informações sobre os artistas locais. Foram criados modelos no Django para representar esses dados de maneira organizada e eficiente (\autoref{fig_er_vitrine}). 
 
 \begin{figure}[htb]
-	\caption{\label{fig_grafico}Diagrama ER da Vitrine de Artistas}
+	\caption{\label{fig_er_vitrine}Diagrama ER da Vitrine de Artistas}
 	\begin{center}
-	    \includegraphics[scale=0.3]{./img/er_diagram_vitrine.png}
+	    \includegraphics[scale=0.5]{./img/er_diagram_vitrine.png}
 	\end{center}
-	\legend{Fonte: o autor}
+	\legend{Elaborado pelo autor desta pesquisa, 2024}
 \end{figure}
 
 Cada artista poderia ter informações como Nome, Nome Artístico, Área de Atuação, Links para portfólios ou redes sociais, documentos, imagens e uma categorização por área de atuação.
@@ -277,14 +277,14 @@ Cada artista poderia ter informações como Nome, Nome Artístico, Área de Atua
 
 O modelo de dados para a Escola de Artes é estruturado de forma a atender às diversas necessidades operacionais e acadêmicas da instituição. Este modelo é essencial para o gerenciamento eficaz dos cursos, alunos, responsáveis, professores, e outros aspectos relacionados ao bom funcionamento da escola.
 
-A base do modelo é o Curso, que representa as disciplinas oferecidas pela escola. Cada curso é caracterizado pelo nome, disciplina, turno e número de vagas disponíveis. As disciplinas são definidas pelo modelo Disciplina, que pode incluir opções como Capoeira, Violão e Pintura e Desenho. O turno do curso pode ser Manhã, Tarde ou Noite, e o número de vagas é validado para garantir que se mantenha dentro de um intervalo apropriado.
+A base do modelo é o Curso, que representa as disciplinas oferecidas pela escola. Cada curso é caracterizado pelo nome, disciplina, turno e número de vagas disponíveis. As disciplinas são definidas pelo modelo Disciplina, que pode incluir opções como Capoeira, Violão e Pintura e Desenho. O turno do curso pode ser Manhã, Tarde ou Noite, e o número de vagas é validado para garantir que se mantenha dentro de um intervalo apropriado (\autoref{fig_er_escola}).
 
 \begin{figure}[htb]
-	\caption{\label{fig_grafico}Diagrama ER da Escola de Artes}
+	\caption{\label{fig_er_escola}Diagrama ER da Escola de Artes}
 	\begin{center}
-	    \includegraphics[scale=0.3]{./img/er_diagram_escola.png}
+	    \includegraphics[scale=0.35]{./img/er_diagram_escola.png}
 	\end{center}
-	\legend{Fonte: o autor}
+	\legend{Elaborado pelo autor desta pesquisa, 2024}
 \end{figure}
 
 As Turmas são associadas a um curso e a um professor, e podem ter vários alunos. Cada turma possui um nome e horário específicos, facilitando a organização das aulas e a alocação dos recursos.
@@ -293,7 +293,7 @@ Os Professores são representados com detalhes como nome, especialidade, e-mail 
 
 O modelo de Aluno captura informações abrangentes sobre os estudantes, incluindo nome, CPF, RG, data de nascimento, e-mail, endereço e telefone. Os alunos podem ter documentos anexados e, caso sejam dependentes, são vinculados a responsáveis através de uma relação de um-para-um. Cada aluno também possui um link único para configurar o acesso ao sistema através do modelo User do Django com uma relação de um-para-um, caso ele não seja um dependente.
 
-Os Responsáveis são os indivíduos que, muitas vezes, são os pais ou responsáveis legais dos alunos. Cada responsável possui informações detalhadas como nome, CPF, data de nascimento, e-mail, endereço e telefone. Além disso, o modelo inclui a capacidade de anexar documentos relevantes e gerar um link único para configurar o acesso ao sistema através do modelo User do Django, com uma relação de um-para-um. A associação de um responsável com um aluno é feita através do campo responsavel, permitindo apenas um responsável para cada aluno.
+Os Responsáveis são os indivíduos que, muitas vezes, são os pais ou responsáveis legais dos alunos. Cada responsável possui informações detalhadas como nome, CPF, data de nascimento, e-mail, endereço e telefone. Além disso, o modelo inclui a capacidade de anexar documentos relevantes e gerar um link único para configurar o acesso ao sistema através do modelo User do Django, com uma relação de um-para-um. A associação de um responsável com um aluno é feita através do campo responsável, permitindo apenas um responsável para cada aluno.
 
 Para registrar ocorrências, acompanhar a frequência e a pontuação dos alunos, foram criados os modelos Ocorrência, Frequência e Pontuação. O modelo de Ocorrência documenta eventos específicos que afetam um aluno em um determinado dia, enquanto o modelo de Frequência rastreia a presença dos alunos e permite justificativas para ausências. A Pontuação avalia o desempenho dos alunos em diferentes aspectos, como assiduidade, comportamento e aptidão. Esses dados são críticos para monitorar o progresso dos alunos e identificar áreas que necessitam de atenção.
 
@@ -311,16 +311,16 @@ O modelo de Inscrição é utilizado para registrar as inscrições de candidato
 
 A classe EditaisPage é uma página do Wagtail que exibe uma lista de editais disponíveis. Esta página usa um \textit{template} para apresentar a lista de editais e permite personalizar o título da página. O método get\_context é usado para adicionar todos os editais ao contexto da página, garantindo que a lista mais atualizada de editais esteja disponível para visualização.
 
-Similarmente, a EditailInscreverPage é uma página do Wagtail dedicada aos detalhes de um edital específico, permitindo que os usuários visualizem informações detalhadas sobre o edital e se inscrevam. Esta página também utiliza um \textit{template} e permite a personalização do título. O método get\_context é utilizado para fornecer o contexto necessário, daquele edital específico.
+Similarmente, a EditalInscreverPage é uma página do Wagtail dedicada aos detalhes de um edital específico, permitindo que os usuários visualizem informações detalhadas sobre o edital e se inscrevam. Esta página também utiliza um \textit{template} e permite a personalização do título. O método get\_context é utilizado para fornecer o contexto necessário, daquele edital específico.
 
-Este conjunto de modelos fornece uma estrutura robusta para o gerenciamento de editais e inscrições, garantindo que as informações sejam mantidas de forma organizada e acessível. Além disso, as funcionalidades integradas de atualização de status e envio de e-mails ajudam a manter a comunicação fluida e eficiente com os participantes, enquanto as páginas do Wagtail oferecem uma interface amigável para a visualização e interação com os editais.
+Este conjunto de modelos fornece uma estrutura robusta para o gerenciamento de editais e inscrições, garantindo que as informações sejam mantidas de forma organizada e acessível. Além disso, as funcionalidades integradas de atualização de status e envio de e-mails ajudam a manter a comunicação fluida e eficiente com os participantes, enquanto as páginas do Wagtail oferecem uma interface amigável para a visualização e interação com os editais (\autoref{fig_er_editais}).
 
 \begin{figure}[htb]
-	\caption{\label{fig_grafico}Diagrama ER dos Editais}
+	\caption{\label{fig_er_editais}Diagrama ER dos Editais}
 	\begin{center}
-	    \includegraphics[scale=0.3]{./img/er_diagram_editais.png}
+	    \includegraphics[scale=0.5]{./img/er_diagram_editais.png}
 	\end{center}
-	\legend{Fonte: o autor}
+	\legend{Elaborado pelo autor desta pesquisa, 2024}
 \end{figure}
 
 

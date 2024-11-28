@@ -36,57 +36,57 @@ Foram realizados testes automatizados utilizando o \textit{framework} Django, fo
 
 \subsection{Testes de Usabilidade}
 
-Embora não tenham sido realizados testes de usabilidade com usuários da Casa de Cultura, foram implementados testes automatizados para avaliar a navegabilidade e a funcionalidade do site. Esses testes incluíram a verificação das interações com o formulário de inscrição e com o painel administrativo, garantindo que as principais funcionalidades fossem acessíveis e operacionais. Por exemplo, os testes confirmaram que o formulário de inscrição de artistas estava sendo corretamente exibido e que as informações eram armazenadas no banco de dados, melhorando a gestão dos dados acadêmicos. A abordagem de testar automatizadamente garantiu uma gestão mais organizada e centralizada, permitindo uma análise precisa da funcionalidade do sistema.
+Embora não tenham sido realizados testes de usabilidade com usuários da Casa de Cultura, foram implementados testes automatizados para avaliar a navegabilidade e a funcionalidade do site. Esses testes incluíram a verificação das interações com o formulário de inscrição e com o painel administrativo, garantindo que as principais funcionalidades fossem acessíveis e operacionais. Por exemplo, os testes confirmaram que o formulário de inscrição de artistas estava sendo corretamente exibido e que as informações eram armazenadas no banco de dados, melhorando a gestão dos dados acadêmicos. A abordagem de testar automatizadamente garantiu uma gestão mais organizada e centralizada, permitindo uma análise precisa da funcionalidade do sistema (\autoref{fig_teste_auto}).
 
-\begin{figure}[htb] \caption{\label{fig_grafico}Sucesso nos testes automatizados } \begin{center} \includegraphics[scale=0.3]{./img/tests.png} \end{center} \legend{Fonte: o autor} \end{figure}
+\begin{figure}[htb] \caption{\label{fig_teste_auto}Sucesso nos testes automatizados } \begin{center} \includegraphics[scale=0.6]{./img/tests.png} \end{center} \legend{Elaborado pelo autor desta pesquisa, 2024} \end{figure}
 
-Além disso, foi conduzido um teste utilizando a ferramenta automatizada PageSpeed Insights \cite{PageSpeedInsights}, que graduou o site com notas 100 nos quesitos acessibilidade e uso de práticas recomendadas na categoria de dispositivos móveis, e 97 na categoria Desktop na categoria acessibilidade, com apenas uma consideração sobre o contraste do botão de pesquisa. Esses resultados indicam que o site foi projetado com uma forte ênfase na experiência do usuário, permitindo uma navegação fluida e eficiente em diferentes dispositivos. A pontuação é definida da seguinte forma pela documentação do PageSpeed Insights:
+Na \autoref{fig_teste_google}, podemos verificar o teste realizado utilizando a ferramenta automatizada PageSpeed Insights \cite{PageSpeedInsights}, que graduou o site com notas 100 nos quesitos acessibilidade e uso de práticas recomendadas na categoria de dispositivos móveis, e 97 na categoria Desktop na categoria acessibilidade, com apenas uma consideração sobre o contraste do botão de pesquisa. Esses resultados indicam que o site foi projetado com uma forte ênfase na experiência do usuário, permitindo uma navegação fluida e eficiente em diferentes dispositivos. A pontuação é definida da seguinte forma pela documentação do PageSpeed Insights:
 
 \begin{citacao}
     Na parte superior da seção estão as pontuações de cada categoria, determinadas pela execução do Lighthouse para coletar e analisar informações de diagnóstico sobre a página. Uma pontuação de 90 ou mais é considerado bom. Entre 50 e 89 é uma pontuação que precisa ser melhorada, e abaixo de 50 é considerada ruim. \cite{PageSpeedInsightsDocs}
 \end{citacao}
 
-\begin{figure}[htb] \caption{\label{fig_grafico}Avaliação Page Speed Insights} \begin{center} \includegraphics[scale=0.3]{./img/pagespeedinsights.png} \end{center} \legend{Fonte: o autor} \end{figure}
+\begin{figure}[htb] \caption{\label{fig_teste_google}Avaliação Page Speed Insights} \begin{center} \includegraphics[scale=0.5]{./img/pagespeedinsights.png} \end{center} \legend{Elaborado pelo autor desta pesquisa, 2024} \end{figure}
 
 \subsection{Testes de Desempenho}
 
 A escolha de usar um serviço gratuito de hospedagem possibilitou a realização de testes em condições adversas, simulando o pior cenário possível em termos de desempenho, pois os testes foram realizados com a cota de CPU completamente utilizada. Apesar dessas limitações, a plataforma se manteve estável, reforçando seu potencial. Os resultados indicam que, mesmo em condições desfavoráveis, a estrutura da plataforma é robusta e capaz de lidar com a carga de usuários.
 
-Foram utilzadas ferramentas automatizadas de avaliação de sites web. O teste realizado com o GTmetrix \cite{GTMetrix} retornou uma avaliação de 90\% no quesito performance, demonstrando um bom tempo de resposta para o carregamento da página principal. Essa nota reflete a eficiência do código e a adequação das tecnologias utilizadas na construção do site.
+Foram utilizadas ferramentas automatizadas de avaliação de sites web. O teste realizado com o GTmetrix \cite{GTMetrix} retornou uma avaliação de 90\% no quesito performance, demonstrando um bom tempo de resposta para o carregamento da página principal. Essa nota reflete a eficiência do código e a adequação das tecnologias utilizadas na construção do site (\autoref{fig_gtmetrix}).
 
-\begin{figure}[htb] \caption{\label{fig_grafico}Avaliação GTmetrix} \begin{center} \includegraphics[scale=0.3]{./img/gtmetrix.png} \end{center} \legend{Fonte: o autor} \end{figure}
+\begin{figure}[htb] \caption{\label{fig_gtmetrix}Avaliação GTmetrix} \begin{center} \includegraphics[scale=0.35]{./img/gtmetrix.png} \end{center} \legend{Elaborado pelo autor desta pesquisa, 2024} \end{figure}
 
 No entanto, é importante reforçar que esses resultados representam o pior caso. O desempenho da plataforma será consideravelmente melhor quando o site for hospedado pela Prefeitura, que oferecerá mais recursos computacionais e de infraestrutura. Essa migração não só melhorará a velocidade de carregamento, mas também permitirá a implementação de novas funcionalidades que dependem de maior capacidade de processamento.
 
-O código-fonte do site também foi submetido a testes utilizando a ferramenta Validator \cite{Validator}. A partir dela, detectou-se uma oportunidade de melhoria na organização dos \textit{scripts}, como pode ser verificado abaixo. Após a refatoração do código, utilizando as boas práticas e reorganizando a importação dos \textit{scripts}, foi verificada a resolução do problema. Essa etapa de otimização é crucial para garantir a escalabilidade da plataforma, permitindo que ela suporte um aumento no número de usuários sem comprometer o desempenho.
+O código-fonte do site também foi submetido a testes utilizando a ferramenta Validator \cite{Validator}. A partir dela, detectou-se uma oportunidade de melhoria na organização dos \textit{scripts}, como pode ser verificado abaixo. Após a refatoração do código, utilizando as boas práticas e reorganizando a importação dos \textit{scripts}, foi verificada a resolução do problema. Essa etapa de otimização é crucial para garantir a escalabilidade da plataforma, permitindo que ela suporte um aumento no número de usuários sem comprometer o desempenho. Essa correção pode ser verificada na \autoref{fig_validator_error} e \autoref{fig_validator_sucess}.
 
 \begin{figure}[htb]
     \label{teste}
     \centering
      \begin{minipage}{0.4\textwidth}
        \centering
-       \caption{Erro apontado pelo Validator} \label{fig_minipage_imagem1}
+       \caption{Erro apontado pelo Validator} \label{fig_validator_error}
        \includegraphics[scale=0.3]{./img/validator_error.png}
-       \legend{Fonte: o autor}
+       \legend{Elaborado pelo autor desta pesquisa, 2024}
      \end{minipage}
      \hfill
      \begin{minipage}{0.4\textwidth}
         \centering
-        \caption{Erro corrigido} \label{fig_minipage_imagem2}
+        \caption{Erro corrigido} \label{fig_validator_sucess}
         \includegraphics[scale=0.3]{./img/validator_sucess.png}
-        \legend{Fonte: o autor}
+        \legend{Elaborado pelo autor desta pesquisa, 2024}
       \end{minipage}
    \end{figure}
 
 \subsection{Testes de Segurança}
 
-Os \textit{logs} gerados por duas plataformas de teste de segurança \textit{online} foram analizados e ambas não detectaram nenhum risco médio ou grave presente no site, o que demonstra uma preocupação constante com a segurança da informação. O teste realizado pela plataforma Pentest Tools \cite{Pentest} identificou quatro considerações de nível baixo. Essas questões estão relacionadas ao certificado de segurança do site, à falta de ofuscação das tecnologias utilizadas e à visibilidade do arquivo robots.txt, que orienta os \textit{web crawlers} sobre quais \ac{URLs} e \textit{endpoints} da aplicação podem ser acessados.
+Os \textit{logs} gerados por duas plataformas de teste de segurança \textit{online} foram analisados e ambas não detectaram nenhum risco médio ou grave presente no site, o que demonstra uma preocupação constante com a segurança da informação. O teste realizado pela plataforma Pentest Tools \cite{Pentest} identificou quatro considerações de nível baixo. Essas questões estão relacionadas ao certificado de segurança do site, à falta de ofuscação das tecnologias utilizadas e à visibilidade do arquivo robots.txt, que orienta os \textit{web crawlers} sobre quais \ac{URLs} e \textit{endpoints} da aplicação podem ser acessados \autoref{fig_pentest}.
 
-\begin{figure}[htb] \caption{\label{fig_grafico}Teste do Pentest Tools} \begin{center} \includegraphics[scale=0.3]{./img/pentest.png} \end{center} \legend{Fonte: o autor} \end{figure}
+\begin{figure}[htb] \caption{\label{fig_pentest}Teste do Pentest Tools} \begin{center} \includegraphics[scale=0.5]{./img/pentest.png} \end{center} \legend{Elaborado pelo autor desta pesquisa, 2024} \end{figure}
 
-A outra plataforma utilizada foi a Immuniweb \cite{Immuniweb}. A metodologia de avaliação dessa ferramenta estabelece que o teste começa com uma pontuação de 100, onde pontos são adicionados por configurações boas e confiáveis do site e do servidor web, e pontos são descontados por configurações inseguras, incompletas ou não confiáveis. A pontuação final pode variar de A+ a F, sendo que a nota máxima é A+ e a mínima F. Após a avaliação, o sistema recebeu a nota "A-", indicando um bom nível de segurança. Embora não tenham sido encontradas vulnerabilidades no sistema, foi observado que dois pacotes estavam desatualizados, embora não possuíssem vulnerabilidades conhecidas. Essa avaliação positiva sugere que a plataforma foi projetada e mantida com um foco significativo em práticas de segurança, o que é crucial para proteger os dados sensíveis dos usuários.
+A outra plataforma utilizada foi a Immuniweb \cite{Immuniweb}. A metodologia de avaliação dessa ferramenta estabelece que o teste começa com uma pontuação de 100, onde pontos são adicionados por configurações boas e confiáveis do site e do servidor web, e pontos são descontados por configurações inseguras, incompletas ou não confiáveis. A pontuação final pode variar de A+ a F, sendo que a nota máxima é A+ e a mínima F. Após a avaliação, o sistema recebeu a nota "A-", indicando um bom nível de segurança. Embora não tenham sido encontradas vulnerabilidades no sistema, foi observado que dois pacotes estavam desatualizados, embora não possuíssem vulnerabilidades conhecidas. Essa avaliação positiva sugere que a plataforma foi projetada e mantida com um foco significativo em práticas de segurança, o que é crucial para proteger os dados sensíveis dos usuários \autoref{fig_immuniweb}.
 
-\begin{figure}[htb] \caption{\label{fig_grafico}Teste do Immuniweb} \begin{center} \includegraphics[scale=0.3]{./img/immuniweb.png} \end{center} \legend{Fonte: o autor} \end{figure}
+\begin{figure}[htb] \caption{\label{fig_immuniweb}Teste do Immuniweb} \begin{center} \includegraphics[scale=0.5]{./img/immuniweb.png} \end{center} \legend{Elaborado pelo autor desta pesquisa, 2024} \end{figure}
 
 Esses testes de segurança não apenas garantem a integridade da plataforma, mas também reforçam a confiança dos usuários na utilização do sistema. A segurança é um fator crucial, especialmente em plataformas que lidam com dados pessoais e informações acadêmicas, e a adoção de boas práticas de segurança ajudará a manter a credibilidade da Casa de Cultura.
 
